@@ -1,0 +1,1 @@
+# Gandikota_Solar_Power_Forecasting_Tool
