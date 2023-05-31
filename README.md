@@ -1,9 +1,6 @@
 # Solar Power Forecasting using Machine Learning and Deep Learning
 
-**Detailed blog published on Medium**:https://medium.com/@akashprabhakar427/solar-power-forecasting-using-machine-learning-and-deep-learning-61d6292693de
 
-**Working App deployed for the same with folowing functionalities:**
-https://akash743-solar-power-forecasting-solar-app-wpm4ik.streamlitapp.com/
 
 - Generating Forecast
 - Forecast Analysis
