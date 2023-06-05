@@ -350,30 +350,6 @@ def main():
 			#st.write(comment_dict)
 			#np.save('comment_section_solar.npy',comment_dict)
 					
-        
-						
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        						
 if __name__=='__main__':
 	main()	
