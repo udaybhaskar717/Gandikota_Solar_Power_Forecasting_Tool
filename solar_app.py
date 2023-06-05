@@ -122,7 +122,9 @@ def main():
 			df = pd.read_csv(uploaded_file)
 			df_n = df[['AMBIENT_TEMPERATURE','MODULE_TEMPERATURE','IRRADIATION']]
 			st.write('Uploaded file')
-			st.dataframe(df.iloc[:,1:6])
+# 			st.dataframe(df.iloc[:,1:6])
+			st.dataframe(df[['AMBIENT_TEMPERATURE', 'MODULE_TEMPERATURE', 'IRRADIATION']])
+
 			#save_uploaded_file(uploaded_file)
 		
 		st.write('')
