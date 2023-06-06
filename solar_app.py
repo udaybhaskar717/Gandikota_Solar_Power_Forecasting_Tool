@@ -133,8 +133,8 @@ def main():
 		
 		if st.button('Predict',key=2):
 			prediction_df = run_ml_app(df_n)	
-			prediction_df = pd.concat([df[['DATE_TIME','BLOCK']],pd.Series(prediction_df)/1000],axis=1)
-			prediction_df.columns = ['DATE_TIME','BLOCK','PREDICTED GEN(MW)']
+			prediction_df = pd.concat([df[['DATE','BLOCK']],pd.Series(prediction_df)],axis=1)
+			prediction_df.columns = ['DATE','BLOCK','PREDICTED GEN(MW)']
 			with st.spinner('Model is working!...'):
 				time.sleep(0.2)
 				st.success('Forecast ready!')	
