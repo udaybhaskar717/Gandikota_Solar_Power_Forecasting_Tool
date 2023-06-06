@@ -11,6 +11,7 @@ matplotlib.use('Agg')
 def dsm_code_1(avc,df_pred,df_act):
 
     df = pd.concat([df_pred,df_act],axis=1)
+    st.write(df.head())
     df['Deviation %'] = (abs(df_act['Actual Gen (MW)'] - df_pred['Predicted Gen (MW)']))/avc*100
     st.write(df.head())
     dsm_list = []
