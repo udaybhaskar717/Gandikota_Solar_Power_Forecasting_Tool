@@ -336,7 +336,10 @@ def main():
 			# comment_section.loc[len(comment_section),'Date'] = str(Date2)
 			# comment_section.loc[len(comment_section),'Shift Incharge'] = choiceh
 			# comment_section.loc[len(['Comment'] = message
-			comment_section = comment_section.append({'Date':str(Date2),'Shift Incharge':choiceh,'Comment':message},ignore_index=True)
+# 			comment_section = comment_section.append({'Date':str(Date2),'Shift Incharge':choiceh,'Comment':message},ignore_index=True)
+			new_row = {'Date':str(Date2),'Shift Incharge':choiceh,'Comment':message}
+			comment_section.loc[len(comment_section.index)] = new_row
+
 			comment_section.to_csv('comment_df.csv')
 			st.success('Comment saved successfully!')
 			st.write('')
