@@ -37,7 +37,7 @@ st.set_page_config(**PAGE_CONFIG)
 
 ##For DSM Calculation
 state_code_dict =  {'Andhra Pradesh':1,'Uttar Pradesh':1,'Madhya Pradesh':1,'Gujarat':2}
-col7, col8, col9, cola, colb = st.beta_columns(5)
+col7, col8, col9, cola, colb = st.columns(5)
 with col9:
 	st.image(img,width = 120,use_column_width=True)
 
@@ -72,13 +72,13 @@ def main():
 	choice = st.sidebar.selectbox('Menu',menu)
 
 	if choice == 'Generate Forecast':
-		# colz,colx,coly = st.beta_columns([1,4,1])
+		# colz,colx,coly = st.columns([1,4,1])
 		# with colx:
 
 		#     st.header('Solar Power Forecasting')	
 		
 		st.subheader('Single Block Prediction')
-		col12,colp,colq,colr = st.beta_columns(4)
+		col12,colp,colq,colr = st.columns(4)
 		with col12:
 			Plant = ['Plant 1','Plant 2','Plant 3','Plant 4']
 			choice_plant = st.selectbox('Plant',Plant)
@@ -105,7 +105,7 @@ def main():
 		st.subheader('Multiple Blocks Prediction')
 		st.write('')
 		
-		collac, colla, collab = st.beta_columns(3)
+		collac, colla, collab = st.columns(3)
 		with collac:
 			Plant_ = ['Plant 1','Plant 2','Plant 3','Plant 4']
 			choice_plan_ = st.selectbox('Plant',Plant_,key='001')
@@ -177,7 +177,7 @@ def main():
 
 
 	elif choice == 'Forecast Analysis':
-		col10, col11, col12 = st.beta_columns([2,4,1])
+		col10, col11, col12 = st.columns([2,4,1])
 		with col11:
 			st.title('Forecast Analysis')
 
@@ -186,7 +186,7 @@ def main():
 		st.write('')
 		st.write('')
 
-		col1, col2, col3 = st.beta_columns(3)
+		col1, col2, col3 = st.columns(3)
 
 		with col1:
 			choice2 = st.selectbox('Select State',['Gujarat','Uttar Pradesh','Andhra Pradesh','Madhya Pradesh'])
@@ -217,7 +217,7 @@ def main():
 			df_act = df_act.iloc[:,1:]
 			#st.dataframe(df_act)
 		if uploaded_file_act and uploaded_file_pred is not None:
-			colj,colk = st.beta_columns((2,1))
+			colj,colk = st.columns((2,1))
 			with colj:
 				st.dataframe(df_pred)
 			with colk:
@@ -295,7 +295,7 @@ def main():
 				
 
 	elif choice == 'Load Data':
-		colc, cold, cole= st.beta_columns([2.8,4,1])
+		colc, cold, cole= st.columns([2.8,4,1])
 		with cold:
 			st.title('Load Data')
 
@@ -315,10 +315,10 @@ def main():
 
 		
 	else :
-		colx, coly = st.beta_columns([2,5])
+		colx, coly = st.columns([2,5])
 		with coly:
 			st.title('Comment Section')
-		colg, colh = st.beta_columns(2)
+		colg, colh = st.columns(2)
 		with colg:
 			Date2 = st.date_input('Select Date')
 		with colh:
