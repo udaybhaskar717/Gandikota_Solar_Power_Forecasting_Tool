@@ -39,8 +39,8 @@ def dsm_code_1(avc,df_pred,df_act):
             
 
     abc = pd.concat([df,pd.Series(dsm_list)],axis=1)
-    abc.columns=['DATE_TIME','BLOCK','Predicted Gen (MW)','Actual Gen (MW)','Deviation %','DSM (Rs.)'] 
-    abc = abc[['DATE_TIME','BLOCK','Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']]
+    abc.columns=['DATE','BLOCK','Predicted Gen (MW)','Actual Gen (MW)','Deviation %','DSM (Rs.)'] 
+    abc = abc[['DATE','BLOCK','Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']]
     abc[['Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']] = round(abc[['Actual Gen (MW)','Predicted Gen (MW)'
     ,'Deviation %','DSM (Rs.)']],2)
     st.write('')
@@ -78,8 +78,8 @@ def dsm_code_2(avc,df_pred,df_act):
             dsm3 = (units_dev -(0.23*avc_units)) * 0.75
             dsm_list.append(abs(dsm1)+abs(dsm2)+abs(dsm3))
    abc = pd.concat([df,pd.Series(dsm_list)],axis=1)
-   abc.columns=['DATE_TIME','BLOCK','Predicted Gen (MW)','Actual Gen (MW)','Deviation %','DSM (Rs.)'] 
-   abc = abc[['DATE_TIME','BLOCK','Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']]
+   abc.columns=['DATE','BLOCK','Predicted Gen (MW)','Actual Gen (MW)','Deviation %','DSM (Rs.)'] 
+   abc = abc[['DATE','BLOCK','Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']]
    abc[['Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']] = round(abc[['Actual Gen (MW)','Predicted Gen (MW)'
     ,'Deviation %','DSM (Rs.)']],2)
    #st.dataframe(abc)
