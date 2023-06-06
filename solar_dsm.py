@@ -42,7 +42,7 @@ def dsm_code_1(avc,df_pred,df_act):
 
     abc = pd.concat([df,pd.Series(dsm_list)],axis=1)
     st.write(abc.head())
-    abc.columns=['DATE','BLOCK','Predicted Gen (MW)','Actual Gen (MW)','Deviation %','DSM (Rs.)'] 
+    abc.columns=['Predicted Gen (MW)','BLOCK','DATE','Actual Gen (MW)','Deviation %','DSM (Rs.)'] 
     abc = abc[['DATE','BLOCK','Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']]
     st.write(abc.head())
     abc[['Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']] = round(abc[['Actual Gen (MW)','Predicted Gen (MW)'
