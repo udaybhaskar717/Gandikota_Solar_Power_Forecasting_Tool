@@ -120,7 +120,7 @@ def main():
 		if uploaded_file is not None:
 			file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type}
 			df = pd.read_csv(uploaded_file)
-			st.write(df.head())
+# 			st.write(df.head())
 			df_n = df[['AMBIENT_TEMPERATURE','MODULE_TEMPERATURE','IRRADIATION']]
 			st.write('Uploaded file')
 # 			st.dataframe(df.iloc[:,1:6])
