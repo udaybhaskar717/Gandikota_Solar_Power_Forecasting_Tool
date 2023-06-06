@@ -44,6 +44,7 @@ def dsm_code_1(avc,df_pred,df_act):
     st.write(abc.head())
     abc.columns=['DATE','BLOCK','Predicted Gen (MW)','Actual Gen (MW)','Deviation %','DSM (Rs.)'] 
     abc = abc[['DATE','BLOCK','Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']]
+    st.write(abc.head())
     abc[['Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']] = round(abc[['Actual Gen (MW)','Predicted Gen (MW)'
     ,'Deviation %','DSM (Rs.)']],2)
     st.write('')
@@ -84,6 +85,7 @@ def dsm_code_2(avc,df_pred,df_act):
    st.write(abc.head())
    abc.columns=['DATE','BLOCK','Predicted Gen (MW)','Actual Gen (MW)','Deviation %','DSM (Rs.)'] 
    abc = abc[['DATE','BLOCK','Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']]
+   st.write(abc.head())
    abc[['Actual Gen (MW)','Predicted Gen (MW)','Deviation %','DSM (Rs.)']] = round(abc[['Actual Gen (MW)','Predicted Gen (MW)'
     ,'Deviation %','DSM (Rs.)']],2)
    #st.dataframe(abc)
