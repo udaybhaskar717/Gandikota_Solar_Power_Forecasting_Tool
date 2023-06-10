@@ -102,7 +102,7 @@ def main():
 		if st.button('Predict'):
 			if choice_plant == 'Plant 1':
 				model_single = load_model("stack_reg_1.pkl")
-				single_value_df = pd.DataFrame(np.array([AMBIENT_TEMPERATURE, MODULE_TEMPERATURE, IRRADIATION]).reshape(-1, 3), 
+				single_value_df = pd.DataFrame(np.array([AMBIENT_TEMPERATURE, MODULE_TEMPERATURE, IRRADIATION*1000]).reshape(-1, 3), 
                                        columns=['AMBIENT_TEMPERATURE', 'MODULE_TEMPERATURE', 'IRRADIATION'])
 				prediction_single = model_single.predict(single_value_df)[0]
 			else:
