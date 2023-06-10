@@ -91,6 +91,7 @@ def main():
 		st.write('')
 		st.write('')		
 		if st.button('Predict'):
+			single_value = np.array([AMBIENT_TEMPERATURE,MODULE_TEMPERATURE,IRRADIATION]).reshape(1,-1)
 			if choice_plant == 'Plant 1':
 				model_single = load_model("stack_reg_1.pkl")
 			else:
