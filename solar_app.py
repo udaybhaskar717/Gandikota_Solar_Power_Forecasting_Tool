@@ -90,15 +90,28 @@ def main():
 			IRRADIATION = st.number_input("Irradiation(kW/m²)",0.00,1.50)
 		st.write('')
 		st.write('')		
+# 		if st.button('Predict'):			
+# 			single_value = np.array([AMBIENT_TEMPERATURE,MODULE_TEMPERATURE,IRRADIATION]).reshape(1,-1)
+# 			if choice_plant == 'Plant 1':
+# 				model_single = load_model("stack_reg_1.pkl")
+# 			else:
+# 				model_single = load_model("Solar_forecast_model_final.pkl")
+# 			prediction_single = model_single.predict(single_value)[0]
+
+# 			st.write('Model Prediction: {} MW'.format(round((prediction_single/1000),2)))	
 		if st.button('Predict'):
-			single_value = np.array([AMBIENT_TEMPERATURE,MODULE_TEMPERATURE,IRRADIATION]).reshape(1,-1)
-			if choice_plant == 'Plant 1':
-				model_single = load_model("stack_reg_1.pkl")
+			if choice_plant == 'Plant 2':
+				model_single = load_model("Solar_forecast_model_final_Plant2.pkl")
+				single_value_df = pd.DataFrame(np.array([AMBIENT_TEMPERATURE, MODULE_TEMPERATURE, IRRADIATION]).reshape(-1, 3), 
+                                       columns=['AMBIENT_TEMPERATURE', 'MODULE_TEMPERATURE', 'IRRADIATION'])
+				prediction_single = model_single.predict(single_value_df)[0]
 			else:
 				model_single = load_model("Solar_forecast_model_final.pkl")
-			prediction_single = model_single.predict(single_value)[0]
+				single_value = np.array([AMBIENT_TEMPERATURE, MODULE_TEMPERATURE, IRRADIATION]).reshape(1,-1)
+				prediction_single = model_single.predict(single_value)[0]
+	
+			st.write('Model Prediction: {} MW'.format(round((prediction_single/1000),2)))
 
-			st.write('Model Prediction: {} MW'.format(round((prediction_single/1000),2)))	
 		# Working with File Upload
 		st.write('')
 		st.write('')
