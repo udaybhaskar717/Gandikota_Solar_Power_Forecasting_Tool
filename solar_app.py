@@ -100,8 +100,8 @@ def main():
 
 # 			st.write('Model Prediction: {} MW'.format(round((prediction_single/1000),2)))	
 		if st.button('Predict'):
-			if choice_plant == 'Plant 2':
-				model_single = load_model("Solar_forecast_model_final_Plant2.pkl")
+			if choice_plant == 'Plant 1':
+				model_single = load_model("stack_reg_1.pkl")
 				single_value_df = pd.DataFrame(np.array([AMBIENT_TEMPERATURE, MODULE_TEMPERATURE, IRRADIATION]).reshape(-1, 3), 
                                        columns=['AMBIENT_TEMPERATURE', 'MODULE_TEMPERATURE', 'IRRADIATION'])
 				prediction_single = model_single.predict(single_value_df)[0]
