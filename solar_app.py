@@ -159,6 +159,17 @@ def main():
 			# alt.Chart(source).mark_line().encode(
 		 #    x='BLOCK',
 		 #    y='PREDICTED GEN(MW)')
+# 			if st.button('Predict'):
+		
+# 		single_value = np.array([AMBIENT_TEMPERATURE,MODULE_TEMPERATURE,IRRADIATION]).reshape(1,-1)
+# 		if choice_plant == 'Plant 2':
+# 			model_single = load_model("Solar_forecast_model_final_Plant2.pkl")
+# 		else:
+# 			model_single = load_model("Solar_forecast_model_final.pkl")
+# 		prediction_single = model_single.predict(single_value)[0]
+
+# 		st.write('Model Prediction: {} MW'.format(round((prediction_single/1000),2)))
+	
 
 			
 			
