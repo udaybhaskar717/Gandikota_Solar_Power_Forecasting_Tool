@@ -68,7 +68,7 @@ The forecasting results are visualized below to illustrate the model's performan
 
 - **Actual vs Predicted Power Output**:
 
-  ![Actual vs Predicted](results/actual_vs_predicted.png)
+  ![Actual vs Predicted](actual_vs_predicted.png)
 
 - **Error Distribution**:
 
