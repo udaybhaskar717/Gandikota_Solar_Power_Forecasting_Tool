@@ -70,14 +70,6 @@ The forecasting results are visualized below to illustrate the model's performan
 
   ![Actual vs Predicted](actual_vs_predicted.png)
 
-- **Error Distribution**:
-
-  ![Error Distribution](results/error_distribution.png)
-
-- **Power Output Trends**:
-
-  ![Power Output Trends](results/power_output_trends.png)
-
 These plots demonstrate the model's capability to closely match actual values and highlight areas for further refinement.
 
 ## Future Work
