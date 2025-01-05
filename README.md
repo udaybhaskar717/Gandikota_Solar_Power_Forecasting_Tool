@@ -84,9 +84,6 @@ Potential enhancements for this project include:
 
 Contributions to this project are welcome. Feel free to fork the repository, create feature branches, and submit pull requests for review.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -94,4 +91,4 @@ I would like to express my gratitude to my academic advisors and peers for their
 
 ---
 
-For any inquiries or further information, please contact [Your Name] at [Your Email Address].
+For any inquiries or further information, please contact [G R Uday Kumar Reddy] at [udaybhaskar717@gmail.com].
